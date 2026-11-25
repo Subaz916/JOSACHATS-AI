@@ -12,6 +12,16 @@ JOSA CHATS is a multi-tenant AI customer support SaaS built with Node.js, Expres
 - Documents: PDF via `pdf-parse`, DOCX via `mammoth`
 - QR: `qrcode`
 
+## Vercel
+
+Production deployment guide: `docs/VERCEL.md`.
+
+Production URL:
+
+```text
+https://josachatsaiagent.vercel.app
+```
+
 ## Quick start
 
 ```bash
@@ -58,7 +68,7 @@ Production Safepay stays disabled unless `SAFEPAY_SANDBOX=false` and `SAFEPAY_PR
 1. Enable Google provider in Supabase Auth.
 2. Set the site URL to `APP_URL`.
 3. Add `http://localhost:3000/auth/callback.html` as a redirect URL during development.
-4. Add the production callback URL on deployment.
+4. Add `https://josachatsaiagent.vercel.app/auth/callback.html` as the production callback URL.
 5. Create an admin row in `admin_roles` for admin access.
 
 ## Safepay webhook
@@ -66,7 +76,7 @@ Production Safepay stays disabled unless `SAFEPAY_SANDBOX=false` and `SAFEPAY_PR
 Set the webhook URL to:
 
 ```text
-https://your-domain/api/webhooks/safepay
+https://josachatsaiagent.vercel.app/api/webhooks/safepay
 ```
 
 The backend verifies HMAC-SHA512 using `SAFEPAY_WEBHOOK_SECRET` and header `X-SFPY-SIGNATURE`. Subscription activation also checks the Safepay tracker from the server. No subscription activates from redirect only.

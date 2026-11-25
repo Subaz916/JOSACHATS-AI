@@ -85,6 +85,10 @@ app.use((req, res, next) => {
 });
 app.use(errorHandler);
 
-app.listen(env.port, () => {
-  logger.info('server_started', { port: env.port, environment: env.nodeEnv, capabilities });
-});
+export default app;
+
+if (process.env.VERCEL !== '1') {
+  app.listen(env.port, () => {
+    logger.info('server_started', { port: env.port, environment: env.nodeEnv, capabilities });
+  });
+}

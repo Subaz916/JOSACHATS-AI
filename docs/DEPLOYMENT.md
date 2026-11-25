@@ -8,6 +8,10 @@
 - Safepay sandbox project
 - Groq OpenAI-compatible API endpoint
 
+## Vercel
+
+For the hosted deployment, use `docs/VERCEL.md`. The repo includes `vercel.json` and `api/index.js`. Vercel serves `frontend` as static files and routes API and fallback paths through Express.
+
 ## Steps
 
 1. Clone the project and run `npm install`.

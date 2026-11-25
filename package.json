@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "dev": "node --watch backend/server.js",
+    "build": "npm run check",
     "check": "node scripts/check.mjs",
     "test": "node --test tests/*.test.js"
   },
