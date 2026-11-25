@@ -15,7 +15,7 @@ The repo includes `vercel.json` and `api/index.js`. Vercel serves static files f
 3. Set framework preset to `Other`.
 4. Keep root directory at `.`.
 5. Keep build command as `npm run build`.
-6. Do not set an output directory. The serverless function serves the frontend.
+6. Keep output directory as `frontend`.
 
 ## 2. Add environment variables
 
